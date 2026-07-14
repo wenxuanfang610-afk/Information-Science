@@ -1,0 +1,278 @@
+/* 全局基础设置：使用柔和温润的配色方案 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f9fa; /* 极淡的灰蓝色背景 */
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 1. Header */
+header {
+    background-color: #2c3e50; /* 深蓝灰 */
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+/* 2. Menu Bar */
+.navbar {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: background 0.3s;
+}
+
+/* 悬浮交互与激活态样式 */
+.navbar a:hover {
+    background-color: #1abc9c; /* 柔和青色 */
+}
+
+.navbar a.active {
+    background-color: #16a085;
+    font-weight: bold;
+}
+
+/* 主容器布局：三栏设计（左右栏+中间主内容） */
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 侧边栏通用样式 */
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    min-width: 200px;
+}
+
+/* 3. Left sidebar */
+.left-sidebar ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.left-sidebar li {
+    margin-bottom: 10px;
+}
+
+.left-sidebar a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.left-sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Main Content Area */
+.main-content {
+    flex: 2.5; /* 主内容更宽 */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.main-content h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+
+/* 首页内容排版 */
+.bio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* 5. Right sidebar (联系表单) */
+.right-sidebar form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.right-sidebar label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.right-sidebar input, 
+.right-sidebar textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.right-sidebar textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.right-sidebar button {
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.right-sidebar button:hover {
+    background-color: #16a085;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Portfolio 样式表格 */
+.table-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.portfolio-table th, 
+.portfolio-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.portfolio-table th {
+    background-color: #34495e;
+    color: white;
+}
+
+.portfolio-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.portfolio-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Trivia 模块样式 */
+.trivia-box {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.prompt {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.trivia-box button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.trivia-box button:hover {
+    background-color: #3498db;
+}
+
+.result-area {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 6. Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+/* 响应式设计：屏幕小于768px时，自动切换为一列（单栏）布局 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
