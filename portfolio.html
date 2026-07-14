@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. Header -->
+    <header>
+        <h1>My Digital Portfolio</h1>
+    </header>
+
+    <!-- 2. Menu bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="trivia.html">Trivia</a>
+    </nav>
+
+    <div class="container">
+        <!-- 3. Left sidebar -->
+        <aside class="sidebar left-sidebar">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="https://www.ritsumei.ac.jp/" target="_blank">Ritsumeikan Univ.</a></li>
+                <li><a href="https://github.com/" target="_blank">GitHub Official</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools (Web Study)</a></li>
+            </ul>
+        </aside>
+
+        <!-- 4. Main Content (作品集表格) -->
+        <main class="main-content">
+            <h2>Projects and Achievements</h2>
+            <p>Below is a summary of my recent technical projects and coursework accomplishments.</p>
+            
+            <div class="table-container">
+                <table class="portfolio-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Project/Work Name</th>
+                            <th>Description</th>
+                            <th>Date Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Personal Website</td>
+                            <td>Developed a responsive 3-page site using HTML, CSS, and JS.</td>
+                            <td>July 2026</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Database System Design</td>
+                            <td>Constructed a relational database with SQL for inventory tracking.</td>
+                            <td>May 2026</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Simple Command-Line Game</td>
+                            <td>Coded a text-based adventure RPG in Java for school project.</td>
+                            <td>January 2026</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Calculator Application</td>
+                            <td>Built an interactive GUI calculator using Python and Tkinter.</td>
+                            <td>November 2025</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>AI Image Classifier</td>
+                            <td>Implemented a basic machine learning model using PyTorch.</td>
+                            <td>September 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- 5. Right sidebar -->
+        <aside class="sidebar right-sidebar">
+            <h3>Contact Me</h3>
+            <form id="contactForm" onsubmit="return validateContact(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required placeholder="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="Your Email">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" required placeholder="Your Message..."></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div id="formFeedback" class="feedback"></div>
+        </aside>
+    </div>
+
+    <!-- 6. Footer -->
+    <footer>
+        <p>Created in 2026 | Connect with me on <a href="https://github.com/" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
